@@ -140,11 +140,17 @@ button.white{
     display: none;
 }
 
-
 .logo{
     width: 150px;
     height: 60px;
     /* border: 1px solid black; */
+}
+
+.shirtimg{
+    background-color: black;
+    border: none;
+    height: 290px;
+    width: 290px;
 }
 /* Home Page */
 .hero{
@@ -187,7 +193,6 @@ button.white{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 700px;
 }
 
 .feature__box{
@@ -780,10 +785,29 @@ footer .copyright{
 }
 
 
-.container{
-    height: 5vh;
-}
-.img1{
-    
-    height: 100vh;
-}
+.gallery:after {
+    content: 'flickity';
+    display: none; /* hide :after */
+  }
+  
+  .gallery {
+    background: #EEE;
+  }
+  
+  .gallery-cell {
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+  }
+  
+  /* cell number */
+  .gallery-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
